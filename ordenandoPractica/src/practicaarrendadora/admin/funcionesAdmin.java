@@ -473,14 +473,14 @@ public class funcionesAdmin {
 
     }
 
-    public static String guardarPorcentajes(String placaPrecio) {
+    public static String guardarPorcentajes(String porcentajeMayor) {
 
         String porcentaje = "0";
         for (int filaP = 0; filaP < diasDescuento.length; filaP++) {
             for (int columnaP = 0; columnaP < diasDescuento[filaP].length; columnaP++) {
 
                 if (diasDescuento[filaP][columnaP] != null) {
-                    if ((Integer.parseInt(placaPrecio) > Integer.parseInt(diasDescuento[filaP][0]))) {
+                    if ((Integer.parseInt(porcentajeMayor) > Integer.parseInt(diasDescuento[filaP][0]))) {
                         porcentaje = diasDescuento[filaP][1];
                     }
                 }
@@ -526,7 +526,7 @@ public class funcionesAdmin {
 
     public static void reportes() {
 
-        if (iFila > 0) {
+        if (iFila >= 0) {
             if (arrendado == "true") {
                 System.out.println("Modelo  Total de dias Rentado");
                 for (int filaModeloMatriz = 0; filaModeloMatriz < ModelosReporte.length; filaModeloMatriz++) {

@@ -83,7 +83,7 @@ public class funcionesUsuario {
             if (logged == true) {
 
                 System.out.println("-------------Autos Disponibles------------------------------");
-                System.out.println("Marca     Linea      Modelo     Placa     Costo   Arrendado");
+                System.out.println("Marca  Linea   Modelo   Placa   Costo  Arrendado");
                 for (int fila = 0; fila < vehiculos.length; fila++) {
 
                     for (int columna = 0; columna < vehiculos[fila].length; columna++) {
@@ -208,8 +208,8 @@ public class funcionesUsuario {
                 System.out.println("El total con el descuento aplicado es de : ");
                 System.out.println(costoxDias - operacion);
                 
-                System.out.println(contadorAutosDisponibles);
-                contadorAutosDisponibles=contadorAutosDisponibles-1;
+                //System.out.println(contadorAutosDisponibles);
+                //contadorAutosDisponibles=contadorAutosDisponibles-1;
                 
                 System.out.println("Presiona una tecla para volver al menu");
                 String volver = sn.nextLine();
